@@ -20,3 +20,9 @@ Route::get('/', function () {
 Route::get('test', function (){
     return view('test');
 });
+Route::get('alpine-test',function (){
+   return view('alpine-test');
+});
+Route::get('vanilla-dt',function (){
+    return view('vanilla-datatables-test');
+});
