@@ -1,3 +1,4 @@
+/*jshint esversion: 6 */
 import _ from 'lodash';
 window._ = _;
 
