@@ -18,7 +18,7 @@ return new class extends Migration
             $table->string('nombre_sede');
             $table->string('direccion_sede');
             $table->string('telefono_sede');
-            $table->tinyInteger('ciudad_sede');
+            $table->string('ciudad_sede');
             $table->timestamps();
         });
     }

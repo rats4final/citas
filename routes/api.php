@@ -20,4 +20,3 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 
 // Route::apiResource('sedes',\App\Http\Controllers\Api\SedeController::class);
 
-Route::apiResource('tipo_sangre',\App\Http\Controllers\Api\TipoSangreController::class);
