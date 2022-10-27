@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\TipoSangreController;
+use App\Models\TipoSangre;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -26,3 +28,4 @@ Route::get('alpine-test',function (){
 Route::get('vanilla-dt',function (){
     return view('vanilla-datatables-test');
 });
+Route::resource('TipoSangre', TipoSangreController::class);
