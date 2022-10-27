@@ -18,9 +18,9 @@ return new class extends Migration
             $table->dateTime('fecha_cita');
             $table->string('detalles_cita');
             $table->Integer('id_secretaria')->unsigned();
-            $table->foreign('id_secretaria')->references('id_users')->on('users');
+            $table->foreign('id_secretaria')->references('id')->on('users');
             $table->Integer('id_paciente')->unsigned();
-            $table->foreign('id_paciente')->references('id_users')->on('users');
+            $table->foreign('id_paciente')->references('id')->on('users');
             $table->timestamps();
         });
     }

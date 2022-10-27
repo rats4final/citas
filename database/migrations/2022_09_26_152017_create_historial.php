@@ -25,7 +25,7 @@ return new class extends Migration
             $table->foreign('id_sede')->references('id_sede')->on('sedes');
 
             $table->Integer('id_medico')->unsigned();
-            $table->foreign('id_medico')->references('id_users')->on('users');
+            $table->foreign('id_medico')->references('id')->on('users');
 
             $table->timestamps();
         });
