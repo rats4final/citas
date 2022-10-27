@@ -7,7 +7,7 @@
     <meta name="description" content="{{ $metaDescription ?? 'Sitio web Citas Hospital San Gabriel'}}">
     <meta name="keywords" content="{{ $keywords ?? 'San Gabriel, Citas' }}">
     @vite(['resources/css/app.css','resources/js/app.js']);
-    <title>{{ $title }}</title>
+    <title>San Gabriel Citas - {{ $title ?? ''}}</title>
 </head>
 <body>
     <x-layouts.nav/>
