@@ -2,6 +2,8 @@
 
 use App\Http\Controllers\TipoSangreController;
 use App\Models\TipoSangre;
+use App\Http\Controllers\TipoPatologiaController;
+use App\Models\TipoPatologia;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -36,3 +38,4 @@ Route::get('vanilla-dt',function (){
 //Rutas de controladores
 Route::resource('sedes', App\Http\Controllers\SedeController::class);
 Route::resource('TipoSangre', TipoSangreController::class);
+Route::resource('TipoPatologia', TipoPatologiaController::class);
