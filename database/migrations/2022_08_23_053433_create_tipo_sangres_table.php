@@ -17,9 +17,9 @@ return new class extends Migration
         Schema::create('tipo_sangre', function (Blueprint $table) {
             $table->increments('id_tipo_sangre');
             $table->string('nombre_tipo_sangre')->unique();
-            $table->string('descripcion_tipo_sangre');
+            $table->string('descripcion_tipo_sangre')->nullable();
             $table->string('rareza_tipo_sangre');
-
+            $table->timestamps();
         });
     }
 
