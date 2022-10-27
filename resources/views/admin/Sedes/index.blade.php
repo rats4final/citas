@@ -21,9 +21,7 @@
               <th>Dirrecion de la Sede</th>
               <th>Telefono Sede</th>
               <th>Ciudad Sede</th>
-              <th></th>
-              <th></th>
-              <th></th>
+              <th>Acciones</th>
                                 </tr>
                             </thead>
                             <tbody>
