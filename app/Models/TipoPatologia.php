@@ -12,4 +12,6 @@ class TipoPatologia extends Model
     protected $table = 'tipo_patologia';
     protected $primaryKey = 'id_tip_patologia';
     protected $fillable = ['nombre_patologia','desc_patologia'];
+
 }
+
