@@ -1,4 +1,5 @@
-import {DataTable} from "simple-datatables"
+/*jshint esversion: 6 */
+import {DataTable} from "simple-datatables";
 const dataTable = new DataTable("#myTable");
 document.querySelector("input.csv").addEventListener("click", () => {
     dataTable.export({
@@ -6,5 +7,5 @@ document.querySelector("input.csv").addEventListener("click", () => {
         download: true,
         lineDelimiter: "\n\n",
         columnDelimiter: ";"
-    })
-})
+    });
+});
