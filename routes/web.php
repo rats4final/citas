@@ -17,6 +17,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+
 Route::get('test', function (){
     return view('test');
 });
@@ -26,3 +27,6 @@ Route::get('alpine-test',function (){
 Route::get('vanilla-dt',function (){
     return view('vanilla-datatables-test');
 });
+
+//Rutas de controladores
+Route::resource('sedes', App\Http\Controllers\SedeController::class);
