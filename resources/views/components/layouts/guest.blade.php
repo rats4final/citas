@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="description" content="{{ $metaDescription ?? 'Sitio web Citas Hospital San Gabriel'}}">
     <meta name="keywords" content="{{ $keywords ?? 'San Gabriel, Citas' }}">
-    @vite(['resources/css/app.css','resources/js/app.js']);
+    @vite(['resources/css/app.css','resources/js/app.js'])
     <title>San Gabriel Citas - {{ $title ?? ''}}</title>
 </head>
 <body>

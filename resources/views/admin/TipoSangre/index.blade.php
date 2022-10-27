@@ -33,8 +33,8 @@
                                         <td>
                                             <a href="{{ url('/TipoSangre/' . $item->id_tipo_sangre . '/edit') }}" title="Edit TipoSangre"><button class="btn btn-primary btn-sm"><i class="fa fa-pencil-square-o" aria-hid_tipo_sangreden="true"></i> Edit</button></a>
                                             <form method="POST" action="{{ url('/TipoSangre' . '/' . $item->id_tipo_sangre) }}" accept-charset="UTF-8" style="display:inline">
-                                               @method('DELETE')
-                                                {{ csrf_field() }}
+                                                @method('DELETE')
+                                                @csrf
                                                 <button type="submit" class="btn btn-danger btn-sm" title="Delete TipoSangre" onclick="return confirm(&quot;Confirm delete?&quot;)"><i class="fa fa-trash-o" aria-hid_tipo_sangreden="true"></i> Delete</button>
                                             </form>
                                         </td>

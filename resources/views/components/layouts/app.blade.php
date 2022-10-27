@@ -6,18 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="description" content="{{ $metaDescription ?? 'Sitio web Citas Hospital San Gabriel'}}">
     <meta name="keywords" content="{{ $keywords ?? 'San Gabriel, Citas' }}">
-    @vite(['resources/css/app.css','resources/js/app.js']);
+    @vite(['resources/css/app.css','resources/js/app.js'])
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-</head>
-<body>
-  
-<div class="container">
-    @yield('content')
-</div>
-  
-</body>
-</html>
-
     <title>San Gabriel Citas - {{ $title ?? ''}}</title>
 </head>
 <body>
