@@ -14,8 +14,8 @@ return new class extends Migration
     public function up()
     {
         Schema::create('patologias_has_historial', function (Blueprint $table) {
-            $table->Integer('id_patologias')->unsigned();
-            $table->foreign('id_patologias')->references('id_patologias')->on('patologias');
+            $table->Integer('id_patologia')->unsigned();
+            $table->foreign('id_patologia')->references('id_patologia')->on('patologias');
             $table->Integer('id_historial')->unsigned();
             $table->foreign('id_historial')->references('id_historial')->on('historial');
         });

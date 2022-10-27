@@ -19,14 +19,14 @@ return new class extends Migration
             $table->string('detalles_historial');
 
             $table->Integer('id_persona')->unsigned();
-            $table->foreign('id_persona')->references('id_persona')->on('persona');
-            
+            $table->foreign('id_persona')->references('id_persona')->on('personas');
+
             $table->Integer('id_sede')->unsigned();
-            $table->foreign('id_sede')->references('id_sede')->on('sede');
-            
+            $table->foreign('id_sede')->references('id_sede')->on('sedes');
+
             $table->Integer('id_medico')->unsigned();
             $table->foreign('id_medico')->references('id_users')->on('users');
-            
+
             $table->timestamps();
         });
     }

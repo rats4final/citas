@@ -17,9 +17,9 @@ return new class extends Migration
             $table->increments('id_tip_rel');
             $table->string('relacion_tip_rel');
             $table->Integer('id_persona')->unsigned();
-            $table->foreign('id_persona')->references('id_persona')->on('persona');
+            $table->foreign('id_persona')->references('id_persona')->on('personas');
             $table->Integer('id_pariente')->unsigned();
-            $table->foreign('id_pariente')->references('id_persona')->on('persona');
+            $table->foreign('id_pariente')->references('id_persona')->on('personas');
             $table->timestamps();
         });
     }
