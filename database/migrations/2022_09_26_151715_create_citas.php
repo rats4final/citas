@@ -17,9 +17,10 @@ return new class extends Migration
             $table->increments('id_cita');
             $table->dateTime('fecha_cita');
             $table->string('detalles_cita');
-            $table->Integer('id_secretaria')->unsigned();
+            //TODO: arreglar el nullable
+            $table->Integer('id_secretaria')->unsigned()->nullable();
             $table->foreign('id_secretaria')->references('id')->on('users');
-            $table->Integer('id_paciente')->unsigned();
+            $table->Integer('id_paciente')->unsigned()->nullable();
             $table->foreign('id_paciente')->references('id')->on('users');
             $table->timestamps();
         });

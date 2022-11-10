@@ -24,7 +24,7 @@ return new class extends Migration
             $table->boolean('donante');
             $table->date('fecha_nac');
             $table->Integer('id_tipo_sangre')->unsigned();
-            $table->foreign('id_tipo_sangre')->references('id_tipo_sangre')->on('tipo_sangre');
+            $table->foreign('id_tipo_sangre')->references('id_tipo_sangre')->on('tipos_sangre');
             $table->timestamps();
         });
     }
