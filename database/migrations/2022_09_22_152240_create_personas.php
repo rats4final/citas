@@ -20,6 +20,8 @@ return new class extends Migration
             $table->string('apellido_ma_per');
             $table->integer('ci_per');
             $table->integer('cel_per');
+            $table->string('num_seguro');
+            $table->boolean('donante');
             $table->date('fecha_nac');
             $table->Integer('id_tipo_sangre')->unsigned();
             $table->foreign('id_tipo_sangre')->references('id_tipo_sangre')->on('tipo_sangre');
