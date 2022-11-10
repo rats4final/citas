@@ -8,6 +8,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PatologiaController;
 use App\Http\Controllers\PersonaController;
 
+use App\Http\Controllers\HistorialController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -43,3 +44,5 @@ Route::resource('TipoSangre', TipoSangreController::class);
 Route::resource('TipoPatologia', TipoPatologiaController::class);
 Route::resource('Patologia', PatologiaController::class);
 Route::resource('personas', PersonaController::class);
+Route::resource('Historial', HistorialController::class);
+
