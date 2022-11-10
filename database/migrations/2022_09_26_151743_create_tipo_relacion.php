@@ -14,8 +14,8 @@ return new class extends Migration
     public function up()
     {
         Schema::create('tipo_relacion', function (Blueprint $table) {
-            $table->increments('id_tip_rel');
-            $table->string('relacion_tip_rel');
+            $table->increments('id_tipo_rel');
+            $table->string('relacion');
             $table->Integer('id_persona')->unsigned();
             $table->foreign('id_persona')->references('id_persona')->on('personas');
             $table->Integer('id_pariente')->unsigned();

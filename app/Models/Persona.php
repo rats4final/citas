@@ -21,4 +21,8 @@ class Persona extends Model
         'donante',
         'id_tipo_sangre'
     ];
+
+    public function tipo_sangre(){
+        return $this->belongsTo(TipoSangre::class,'id_tipo_sangre','id_tipo_sangre');
+    }
 }

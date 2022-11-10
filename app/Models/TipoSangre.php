@@ -12,4 +12,8 @@ class TipoSangre extends Model
     protected $table = 'tipo_sangre';
     protected $primaryKey = 'id_tipo_sangre';
     protected $fillable = ['nombre_tipo_sangre','descripcion_tipo_sangre','rareza_tipo_sangre'];
+
+    public function personas(){
+        return $this->hasMany(Persona::class,'id_tipo_sangre','id_tipo_sangre');
+    }
 }

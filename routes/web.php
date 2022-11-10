@@ -45,4 +45,5 @@ Route::resource('TipoPatologia', TipoPatologiaController::class);
 Route::resource('Patologia', PatologiaController::class);
 Route::resource('personas', PersonaController::class);
 Route::resource('Historial', HistorialController::class);
+Route::resource('TipoRelacion', \App\Http\Controllers\TipoRelacionController::class);
 
