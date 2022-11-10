@@ -6,7 +6,7 @@ use App\Http\Controllers\TipoPatologiaController;
 use App\Models\TipoPatologia;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PatologiaController;
-
+use App\Http\Controllers\HistorialController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -41,3 +41,5 @@ Route::resource('sedes', App\Http\Controllers\SedeController::class);
 Route::resource('TipoSangre', TipoSangreController::class);
 Route::resource('TipoPatologia', TipoPatologiaController::class);
 Route::resource('Patologia', PatologiaController::class);
+Route::resource('Historial', HistorialController::class);
+
