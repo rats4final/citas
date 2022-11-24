@@ -29,7 +29,7 @@
                                         <td>{{ $loop->iteration }}</td>
                                         <td>{{ $item->fecha_cita }}</td>
                                         <td>{{ $item->detalles_cita }}</td>
-                                        <td>{{ $item->id_secretaria->name}}</td>
+                                        <td>{{ $item->id_secretaria}}</td>
                                         <td>
                                             <a href="{{ url('/Citas/' . $item->id_citas . '/edit') }}" title="Edit Citas"><button class="btn btn-primary btn-sm"><i class="fa fa-pencil-square-o" aria-hid_tip_Citasden="true"></i> Edit</button></a>
                                             <form method="POST" action="{{ url('/Citas' . '/' . $item->id_citas) }}" accept-charset="UTF-8" style="display:inline">
