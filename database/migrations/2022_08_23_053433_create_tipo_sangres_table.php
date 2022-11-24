@@ -13,7 +13,6 @@ return new class extends Migration
      */
     public function up()
     {
-
         Schema::create('tipos_sangre', function (Blueprint $table) {
             $table->increments('id_tipo_sangre');
             $table->string('nombre_tipo_sangre')->unique();

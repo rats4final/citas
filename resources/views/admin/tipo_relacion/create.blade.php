@@ -6,12 +6,25 @@
             <form action="{{ route('TipoRelacion.store') }}" method="post">
                 @csrf
                 <label>Relacion</label></br>
-                <input type="text" name="relacion" class="form-control"></br>
+                <select class="form-control" name="relacion">
+                    <option>Padre</option>
+                    <option>Madre</option>
+                    <option>Hermano(a)</option>
+                    <option>Tio(a)</option>
+                </select>
                 <label>Persona 1</label></br>
-                <input type="text" name="id_persona" class="form-control"></br>
+                <select class="form-control" name="id_persona">
+                    @foreach($personas as $persona)
+                        <option value="{{$persona->id_persona}}">{{$persona->nombre_per}}</option>
+                    @endforeach
+                </select>
                 <label>Persona 2</label></br>
-                <input type="text" name="id_pariente" class="form-control"></br>
-                <input type="submit" value="Save" class="btn btn-success"></br>
+                <select class="form-control" name="id_pariente">
+                    @foreach($personas as $pariente)
+                        <option value="{{$pariente->id_persona}}">{{$pariente->nombre_per}}</option>
+                    @endforeach
+                </select><br>
+                <input type="submit" value="Guardar" class="btn btn-success"></br>
             </form>
         </div>
     </div>

@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\CitasController;
 use App\Http\Controllers\TipoSangreController;
 use App\Models\TipoSangre;
 use App\Http\Controllers\TipoPatologiaController;
@@ -21,7 +22,7 @@ use App\Http\Controllers\HistorialController;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('inicio');
 });
 
 Route::get('home', function () {
@@ -46,4 +47,5 @@ Route::resource('Patologia', PatologiaController::class);
 Route::resource('personas', PersonaController::class);
 Route::resource('Historial', HistorialController::class);
 Route::resource('TipoRelacion', \App\Http\Controllers\TipoRelacionController::class);
+Route::resource('Citas', CitasController::class);
 

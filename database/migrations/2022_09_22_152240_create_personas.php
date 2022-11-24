@@ -25,6 +25,8 @@ return new class extends Migration
             $table->date('fecha_nac');
             $table->Integer('id_tipo_sangre')->unsigned();
             $table->foreign('id_tipo_sangre')->references('id_tipo_sangre')->on('tipos_sangre');
+            $table->integer('id_pariente')->unsigned()->nullable();
+            $table->foreign('id_pariente')->references('id_persona')->on('personas');
             $table->timestamps();
         });
     }

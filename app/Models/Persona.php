@@ -19,10 +19,19 @@ class Persona extends Model
         'fecha_nac',
         'num_seguro',
         'donante',
-        'id_tipo_sangre'
+        'id_tipo_sangre',
+        'id_pariente'
+    ];
+    protected $dates = [
+        'fecha_nac'
     ];
 
     public function tipo_sangre(){
         return $this->belongsTo(TipoSangre::class,'id_tipo_sangre','id_tipo_sangre');
     }
+
+    public function pariente(){
+        return $this->belongsTo(Persona::class,'id_pariente','id_persona');
+    }
+
 }

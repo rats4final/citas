@@ -25,6 +25,7 @@
                                         <th># Seguro</th>
                                         <th>Es donante</th>
                                         <th>Tipo Sangre</th>
+                                        <th>Pariente</th>
                                         <th>Acciones</th>
                                     </tr>
                                 </thead>
@@ -40,6 +41,7 @@
                                             <td>{{ $persona->num_seguro }}</td>
                                             <td>{{ $persona->donante }}</td>
                                             <td>{{ $persona->tipo_sangre->nombre_tipo_sangre }}</td>
+                                            <td>{{ $persona->pariente->nombre_per }}</td>
                                             <td>
                                                 <a href="{{ route('personas.show', $persona) }}"
                                                     title="View Student"><button class="btn btn-info btn-sm"><i
