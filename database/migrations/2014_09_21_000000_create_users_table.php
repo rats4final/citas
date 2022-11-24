@@ -22,8 +22,6 @@ return new class extends Migration
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password')->nullable();
             $table->rememberToken();
-            $table->Integer('id_persona')->unsigned();
-            $table->foreign('id_persona')->references('id_persona')->on('personas');
             $table->timestamps();
         });
     }
