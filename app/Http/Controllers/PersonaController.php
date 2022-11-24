@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Persona;
+use App\Models\TipoSangre;
 use Illuminate\Http\Request;
 use Psy\CodeCleaner\ReturnTypePass;
 
@@ -16,6 +17,7 @@ class PersonaController extends Controller
     public function index()
     {
         $personas = Persona::get();
+        //return $personas;
         return view('admin.Persona.index', compact('personas'));
     }
 
@@ -26,7 +28,9 @@ class PersonaController extends Controller
      */
     public function create()
     {
-        return view('admin.Persona.create');
+        $personas = Persona::get();
+        $tipos_sangre = TipoSangre::get();
+        return view('admin.Persona.create', compact('tipos_sangre','personas'));
     }
 
     /**
