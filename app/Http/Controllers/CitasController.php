@@ -19,7 +19,7 @@ class CitasController extends Controller
 
     public function create()
     {
-        $User =User::get();
+        $User = User::get();
         return view('admin.Citas.create');
     }
 
@@ -32,12 +32,14 @@ class CitasController extends Controller
 
     public function show($id)
     {
-        $Citas =Citas::find($id);
+        $Citas = Citas::find($id);
         return view('admin.Citas.show')->with('Citas', $Citas);
     }
 
     public function edit($id)
     {
+        $User = User::all();
+
         $Citas =Citas::find($id);
         return view('admin.Citas.edit')->with('Citas', $Citas);
     }
