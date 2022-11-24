@@ -87,7 +87,7 @@
                 <div class="box-default">
                     <h1 class="box-default-title">Bienvenido</h1>
                     <div class="box-default-decor"></div>
-                    <p class="big box-default-text"> La Caja Nacional de Salud cubre prestaciones de servicios en riesgo profesional, riesgo común, maternidad, además entrega subsidios pre natal y post natal, que se realiza en especie y un pago en dinero.</p>
+                    <p class="big box-default-text"> El Hospital San Gabriel cubre prestaciones de servicios en riesgo profesional, riesgo común, maternidad, además entrega subsidios pre natal y post natal, que se realiza en especie y un pago en dinero.</p>
                 </div>
             </div>
         </div>
@@ -97,7 +97,7 @@
             <div class="container">
                 <div class="box-booking">
                     <h1 class="box-default-title">
-                        <center>Caja Nacional de Salud</center>
+                        <center>Hospital San Gabriel</center>
                     </h1>
                 </div>
             </div>
