@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\StorePersonaRequest;
 use App\Models\Persona;
 use App\Models\TipoSangre;
 use Illuminate\Http\Request;
@@ -39,7 +40,7 @@ class PersonaController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(StorePersonaRequest $request)
     {
         $datos = $request->all();
         Persona::create($datos);
