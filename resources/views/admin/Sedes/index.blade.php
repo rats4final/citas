@@ -1,7 +1,5 @@
 <x-layouts.app>
-
-<div class="container">
-    <div class="row">
+<div class="d-flex">
         <div class="col-md-9">
             <div class="card">
                 <div class="card-header">
@@ -48,7 +46,5 @@
                 </div>
             </div>
         </div>
-    </div>
 </div>
-
 </x-layouts.app>

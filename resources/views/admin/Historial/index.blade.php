@@ -28,12 +28,11 @@
                             <tbody>
                                 @foreach ($Historias as $Historia)
                                 <tr>
-
-                                    <td>{{ $Historia['id_persona'] }}</td>
-                                    <td>{{ $Historia['id_sede'] }}</td>
-                                    <td>{{ $Historia['id_medico'] }}</td>
-                                    <td>{{ $Historia['fecha_historial'] }}</td>
-                                    <td>{{ $Historia['detalles_historial'] }}</td>
+                                    <td>{{ $Historia->personas->nombre_per ." ".$Historia->personas->apellido_pa_per ." ".$Historia->personas->apellido_ma_per }}</td>
+                                    <td>{{ $Historia->sede->nombre_sede }}</td>
+                                    <td>{{ $Historia->users->persona->nombre_per ." ". $Historia->users->persona->apellido_pa_per  ." ". $Historia->users->persona->apellido_ma_per}}</td>
+                                    <td>{{ $Historia->fecha_historial}}</td>
+                                    <td>{{ $Historia->detalles_historial }}</td>
                                     <td>
                                         <a href="{{ url('/Historial' . '/' . $Historia['id_historial']) }}" title="View Student"><button class="btn btn-info btn-sm"><i class="fa fa-eye" aria-hidden="true"></i> Mostrar</button></a>                                        <a href="{{ url('/Historial' . '/' . $Historia->id_historial . '/edit') }}" title="Edit Student"><button class="btn btn-primary btn-sm"><i class="fa fa-pencil-square-o" aria-hidden="true"></i> Editar</button></a>
                                         <form method="POST" action="{{ url('/Historial' . '/' . $Historia->id_historial) }}" accept-charset="UTF-8" style="display:inline">

@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Persona;
 use App\Models\TipoRelacion;
 use Illuminate\Http\Request;
 
@@ -15,6 +16,7 @@ class TipoRelacionController extends Controller
     public function index()
     {
         $TipoRelaciones = TipoRelacion::get();
+        //return $TipoRelaciones;
         return view('admin.tipo_relacion.index', compact('TipoRelaciones'));
     }
 
@@ -25,7 +27,8 @@ class TipoRelacionController extends Controller
      */
     public function create()
     {
-        return view('admin.tipo_relacion.create');
+        $personas = Persona::get();
+        return view('admin.tipo_relacion.create', compact('personas'));
     }
 
     /**
