@@ -31,7 +31,7 @@
                                         <td>{{ $item->detalles_cita }}</td>
                                         <td>{{ $item->id_secretaria}}</td>
                                         <td>
-                                            <a href="{{ url('/Citas' . $item->id_cita . '/edit') }}" title="Edit Citas"><button class="btn btn-primary btn-sm"><i class="fa fa-pencil-square-o" aria-hid_tip_Citasden="true"></i> Edit</button></a>
+                                            <a href="{{ url('/Citas/' . $item->id_cita . '/edit') }}" title="Edit Citas"><button class="btn btn-primary btn-sm"><i class="fa fa-pencil-square-o" aria-hid_tip_Citasden="true"></i> Edit</button></a>
                                             <form method="POST" action="{{ url('/Citas/' . '/' . $item->id_cita) }}" accept-charset="UTF-8" style="display:inline">
                                                @method('DELETE')
                                                 {{ csrf_field() }}
