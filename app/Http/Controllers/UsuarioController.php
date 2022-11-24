@@ -2,7 +2,11 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Usuario;
+//use App\Models\Usuario;
+use App\Models\User;
+use App\Models\Persona;
+use App\Models\TipoSangre;
+
 use Illuminate\Http\Request;
 class UsuarioController extends Controller
 {
@@ -13,7 +17,9 @@ class UsuarioController extends Controller
      */
     public function index()
     {
-        //
+        $usuarios = user::with(['persona'])->get();
+        return view('admin.user.index', compact('usuarios'));
+        //return $usuario;
     }
     /**
      * Show the form for creating a new resource.
@@ -22,7 +28,9 @@ class UsuarioController extends Controller
      */
     public function create()
     {
-        //
+        $personas = Persona::get();
+        $tipos_sangre = TipoSangre::get();
+        return view('admin.user.create', compact('tipos_sangre','personas'));
     }
 
     /**
@@ -33,7 +41,16 @@ class UsuarioController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $datos = $request->all();
+        Persona::create($datos);
+        $id = Persona::latest('id_persona')->first();
+        //return to_route('personas.index');
+        $datos1 = ['rol'=>"1", 'estado'=>1, 'id_persona'=>$id->id_persona];
+        $datosUser = array_merge($datos, $datos1);
+        User::create($datosUser);
+        return redirect('/Usuario');
+
+
     }
 
     /**
@@ -76,8 +93,17 @@ class UsuarioController extends Controller
      * @param  \App\Models\Usuario  $usuario
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Usuario $usuario)
+    public function destroy(Request $request, $usuario)
     {
-        //
+        $input = $request->all();
+
+        $usuarios = User::find($usuario);
+
+        $estado = ['estado'=>0];
+
+        $usuarios->update($estado);
+
+    //Redirecionas para no bugear el jalar de datos con reddirect para recargar la vista totalmente
+    return redirect('/Usuario');
     }
 }
