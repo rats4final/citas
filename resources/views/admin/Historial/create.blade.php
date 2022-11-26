@@ -47,12 +47,17 @@
             </select>
 
               <label>Fecha de la historia</label></br>
-              <input type="datetime-local" name="fecha_historial" id="fecha_historial" class="form-control" required></br>
+              <input type="datetime-local" name="fecha_historial" id="fecha_historial" min="2022-11-26 00:00" max="2022-12-30 10:00" class="form-control" required></br>
 
               <label>Detalles de la historia</label></br>
-              <input type="text" name="detalles_historial" id="detalles_historial" class="form-control" required></br>
+              <input type="text" name="detalles_historial" id="detalles_historial" class="form-control" required>
+              @error('detalles_historial')
+              <li class="text-danger">{{$message}}</li><br>
+              @enderror
+            </br>
 
-              <input type="submit" value="Save" class="btn btn-success"></br>
+
+              <input type="submit" value="Subir la Historia" class="btn btn-success"></br>
           </form>
 
         </div>

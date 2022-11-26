@@ -8,6 +8,10 @@ use App\Models\Sede;
 use App\Models\User;
 use App\Models\Persona;
 use Illuminate\Http\Request;
+use App\Http\Requests\StoreHistorialRequest;
+use App\Http\Requests\EditHistorialRequest;
+
+
 
 class HistorialController extends Controller
 {
@@ -32,7 +36,7 @@ class HistorialController extends Controller
         //return $Users;
     }
 
-    public function store(Request $request)
+    public function store(StoreHistorialRequest $request)
     {
         //
         $Datos_Historia=request()->except('_token');
@@ -70,7 +74,7 @@ class HistorialController extends Controller
     }
 
 
-    public function update(Request $request, $historial)
+    public function update(EditHistorialRequest $request, $historial)
     {
         //
         $input = $request->all();
@@ -89,9 +93,6 @@ class HistorialController extends Controller
     {
         //
         Historial::destroy($Historial);
-
-        // $Historial->delete();
-
         return redirect('/Historial');
     }
 }
