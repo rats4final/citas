@@ -1,3 +1,4 @@
+
 <x-layouts.app>
     <div class="container">
         <div class="row">

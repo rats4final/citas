@@ -1,7 +1,7 @@
 <nav>
     <div class="flex justify-end">
         <ul>
-            <li>Hola</li>
+
             @auth
             <li>
                 <form action="{{ route('logout') }}" method="POST">

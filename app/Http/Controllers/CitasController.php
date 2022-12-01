@@ -25,6 +25,12 @@ class CitasController extends Controller
 
     public function store(Request $request)
     {
+        $request->validate([
+            
+            'fecha_cita'=>['required'],
+            'detalles_cita'=>['required','max:50']
+            
+        ]);
         $input = $request->all();
        Citas::create($input);
         return redirect('Citas')->with('flash_message', 'Citas Addedd!');
