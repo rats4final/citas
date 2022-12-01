@@ -66,7 +66,9 @@ class PersonaController extends Controller
      */
     public function edit(Persona $persona)
     {
-        return view('admin.Persona.edit', compact('persona'));
+        $personas = Persona::get();
+        $tipos_sangre = TipoSangre::get();
+        return view('admin.Persona.edit', compact('tipos_sangre','personas','persona'));
     }
 
     /**

@@ -10,6 +10,7 @@ use App\Http\Controllers\PatologiaController;
 use App\Http\Controllers\PersonaController;
 
 use App\Http\Controllers\HistorialController;
+use App\Http\Controllers\UsuarioController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -48,4 +49,5 @@ Route::resource('personas', PersonaController::class);
 Route::resource('Historial', HistorialController::class);
 Route::resource('TipoRelacion', \App\Http\Controllers\TipoRelacionController::class);
 Route::resource('Citas', CitasController::class);
+Route::resource('Usuario', UsuarioController::class);
 

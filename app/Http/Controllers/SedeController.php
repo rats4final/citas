@@ -5,6 +5,9 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 
 use App\Models\Sede;
+use App\Http\Requests\StoreSedeRequest;
+use App\Http\Requests\EditSedeRequest;
+
 
 class SedeController extends Controller
 {
@@ -24,7 +27,7 @@ class SedeController extends Controller
     }
 
 
-    public function store(Request $request)
+    public function store(StoreSedeRequest $request)
     {
         //
         $Datos_Sedes=request()->except('_token');
@@ -50,7 +53,7 @@ class SedeController extends Controller
         return View ('admin.Sedes.edit',compact('Sede'));
     }
 
-    public function update(Request $request, $Id_Sede)
+    public function update(EditSedeRequest $request, $Id_Sede)
     {
         //
 

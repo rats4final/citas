@@ -3,10 +3,9 @@
 namespace App\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
-use Illuminate\Http\Request;
-class StoreSedeRequest extends FormRequest
-{
 
+class EditSedeRequest extends FormRequest
+{
     public function authorize()
     {
         return true;
@@ -40,4 +39,3 @@ class StoreSedeRequest extends FormRequest
     ];
 }
 }
-

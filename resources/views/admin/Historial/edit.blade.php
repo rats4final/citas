@@ -52,12 +52,17 @@
         </select>
 
           <label>Fecha de la historia</label></br>
-          <input required type="datetime-local" name="fecha_historial" id="fecha_historial" value="{{$Historia->fecha_historial}}"  class="form-control"></br>
+          <input required type="datetime-local" name="fecha_historial" id="fecha_historial" value="{{$Historia->fecha_historial}}" min="2022-11-26 00:00" max="2022-12-30 10:00"  class="form-control"></br>
 
           <label>Detalles de la historia</label></br>
-          <input required type="text" name="detalles_historial" id="detalles_historial" value="{{$Historia->detalles_historial}}"  class="form-control"></br>
+          <input required type="text" name="detalles_historial" id="detalles_historial" value="{{$Historia->detalles_historial}}"  class="form-control">
+          @error('detalles_historial')
+          <li class="text-danger">{{$message}}</li><br>
+          @enderror
 
-          <input type="submit" value="Update" class="btn btn-success"></br>
+        </br>
+
+          <input type="submit" value="Actualizar" class="btn btn-success"></br>
       </form>
 
     </div>
