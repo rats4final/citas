@@ -8,10 +8,14 @@
                 <p class="card-text">Apellido Materno : {{ $persona->apellido_ma_per }}</p>
                 <p class="card-text">Carnet de Identidad: {{ $persona->ci_per }}</p>
                 <p class="card-text">Celular: {{ $persona->cel_per }}</p>
-                <p class="card-text">Fecha de Nacimiento: {{ $persona->fecha_nac }}</p>
+                <p class="card-text">Fecha de Nacimiento: {{ $persona->fecha_nac->format('d/m/Y') }}</p>
                 <p class="card-text">Numero de Seguro: {{ $persona->num_seguro }}</p>
-                <p class="card-text">Es donante: {{ $persona->donante }}</p>
-                <p class="card-text">Tipo de Sangre: {{ $persona->id_tipo_sangre }}</p>
+                @if ($persona->donante == 1)
+                    <p class="card-text">Es donante: Si</p>
+                @else
+                    <p class="card-text">Es donante: No</p>
+                @endif
+                <p class="card-text">Tipo de Sangre: {{ $persona->tipo_sangre->nombre_tipo_sangre }}</p>
             </div>
             </hr>
         </div>

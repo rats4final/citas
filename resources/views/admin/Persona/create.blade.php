@@ -32,7 +32,10 @@
                     @endforeach
                 </select> <br>
                 <label>Es donante</label></br>
-                <input type="text" name="donante" class="form-control"></br>
+                <select name="donante" class="form-control">
+                    <option value="1">Si</option>
+                    <option value="0">No</option>
+                </select><br>
                 <input type="submit" value="Guardar" class="btn btn-success"></br>
             </form>
 
