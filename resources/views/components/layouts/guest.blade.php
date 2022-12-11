@@ -9,7 +9,7 @@
     @vite(['resources/css/app.css','resources/js/app.js'])
     <title>San Gabriel Citas - {{ $title ?? ''}}</title>
 </head>
-<body>
+<body class="scrollbar">
     <x-layouts.nav/>
     {{ $slot }}
     <x-layouts.footer/>
