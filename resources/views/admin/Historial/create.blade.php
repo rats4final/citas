@@ -10,7 +10,7 @@
               {{-- <label>Persona</label></br>
               <input type="text" name="id_persona" id="id_persona" class="form-control"></br> --}}
 
-              <label>Pacientes</label><br><select name="id_persona" id="id_persona" class="form-select" required>
+              <label>Pacientes</label><br><select class="form-control" name="id_persona" id="id_persona" required>
 
                 <option value="">Por favor selecione un paciente</option>
                 @foreach ( $Users as $user)
@@ -20,10 +20,10 @@
                 @endif
                 @endforeach
 
-            </select>
+            </select><br>
 
 
-              <label>Sedes</label><br><select name="id_sede" id="id_sede" class="form-select" required>
+              <label>Sedes</label><br><select name="id_sede" id="id_sede" class="form-control" required>
 
                 <option value=""> Selecione una Sede </option>
                 @foreach ( $Sedes as $sede)
@@ -32,10 +32,10 @@
 
                 @endforeach
 
-            </select>
+            </select><br>
 
 
-              <label>Medicos</label><br><select name="id_medico" id="id_medico" class="form-select" required>
+              <label>Medicos</label><br><select name="id_medico" id="id_medico" class="form-control" required>
 
                 <option value="">Por favor selecione un medico</option>
                 @foreach ( $Users as $user)
@@ -44,7 +44,7 @@
                 @endif
                 @endforeach
 
-            </select>
+            </select><br>
 
               <label>Fecha de la historia</label></br>
               <input type="datetime-local" name="fecha_historial" id="fecha_historial" min="2022-11-26 00:00" max="2022-12-30 10:00" class="form-control" required></br>

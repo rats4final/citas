@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Citas;
+use App\Models\Especialidad;
 use App\Models\User;
 
 class CitasController extends Controller
@@ -11,28 +12,32 @@ class CitasController extends Controller
     public function index()
     {
         //$User =User::get();
-        $Citas =Citas::with('users')->get();
+        $Citas =Citas::with(['medico:id,id_persona','medico.persona:id_persona,nombre_per,apellido_pa_per,apellido_ma_per','paciente:id,id_persona','paciente.persona:id_persona,nombre_per,apellido_pa_per,apellido_ma_per'])->get();
 
-        //return $Citas;
         return view ('admin.Citas.index',compact('Citas'));
     }
 
     public function create()
     {
-        $User = User::get();
-        return view('admin.Citas.create');
+        $Users = User::with(['persona:id_persona,nombre_per,apellido_pa_per,apellido_ma_per','persona.has_especialidad'])->get();
+
+        $Especialidades =Especialidad::all();
+
+        return view('admin.Citas.create',compact('Users','Especialidades'));
     }
 
     public function store(Request $request)
     {
         $request->validate([
-            
             'fecha_cita'=>['required'],
             'detalles_cita'=>['required','max:50']
-            
         ]);
-        $input = $request->all();
-       Citas::create($input);
+        $Cita = $request->all();
+
+        $Nivel=['estado' => 1,'id_paciente'=> 1];
+        $Cita= array_merge($Nivel, $Cita);
+
+       Citas::create($Cita);
         return redirect('Citas')->with('flash_message', 'Citas Addedd!');
     }
 

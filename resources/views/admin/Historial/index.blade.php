@@ -2,7 +2,7 @@
 
     <div class="container-fluid">
         <div class="row">
-            <div class="col-md-9">
+            <div class="col-md-12">
                 <div class="card">
                     <div class="card-header">
                         <h2>Historias</h2>
@@ -34,8 +34,8 @@
                                         <td>{{ $Historia->fecha_historial}}</td>
                                         <td>{{ $Historia->detalles_historial }}</td>
                                         <td>
-                                            <a href="{{ url('/Historial' . '/' . $Historia['id_historial']) }}" title="View Student"><button class="btn btn-info btn-sm"><i class="fa fa-eye" aria-hidden="true"></i> Mostrar</button></a>
-                                            <a href="{{ url('/Historial' . '/' . $Historia->id_historial . '/edit') }}" title="Edit Student"><button class="btn btn-primary btn-sm"><i class="fa fa-pencil-square-o" aria-hidden="true"></i> Editar</button></a>
+                                            <a href="{{ url('/Historial' . '/' . $Historia['id_historial']) }}" ><button class="btn btn-info btn-sm"><i class="fa fa-eye" aria-hidden="true"></i> Mostrar</button></a>
+                                            <a href="{{ url('/Historial' . '/' . $Historia->id_historial . '/edit') }}" ><button class="btn btn-primary btn-sm"><i class="fa fa-pencil-square-o" aria-hidden="true"></i> Editar</button></a>
                                             <form method="POST" action="{{ url('/Historial' . '/' . $Historia->id_historial) }}" accept-charset="UTF-8" style="display:inline">
                                                 {{ method_field('DELETE') }}
                                                 {{ csrf_field() }}

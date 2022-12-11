@@ -16,11 +16,11 @@
   	<title>Sidebar</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
     <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900" rel="stylesheet">
-		
+
 		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-		<link rel="stylesheet" href="css/sidebar.css">
+		<link rel="stylesheet" href="{{ asset('css/sidebar.css')}}">
+
   </head>
   <body>
     <div class="wrapper d-flex align-items-stretch">
@@ -29,9 +29,9 @@
                 <button type="button" id="sidebarCollapse" class="btn btn-primary">
         </button>
     </div>
-          <div class="img bg-wrap text-center py-4" style="background-image: url(images/bg_1.jpg);">
+          <div class="img bg-wrap text-center py-4" style="background-image: url({{asset('img/bg_1.jpg')}});">
               <div class="user-logo">
-                  <div class="img" style="background-image: url(images/logo.jpg);"></div>
+                  <div class="img" style="background-image: url({{asset('img/logo.jpg')}});"></div>
               </div>
           </div>
     <ul class="list-unstyled components mb-5">
@@ -42,7 +42,7 @@
           <a href="#"><span class="fa fa-download mr-3 notif"><small class="d-flex align-items-center justify-content-center">5</small></span> Notificaciones</a>
       </li>
       <li>
-        <a href="#"><span class="fa fa-gift mr-3"></span> </a>
+        <a href="#"><span class="fa fa-gift mr-3"></span> Citas  </a>
       </li>
       <li>
         <a href="#"><span class="fa fa-trophy mr-3"></span> Top Review</a>
@@ -64,19 +64,19 @@
   <div id="content" class="p-4 p-md-5 pt-5">
     <x-layouts.nav/>
     {{ $slot }}
-    
+
 </div>
 
     </div>
 
-    
-    <x-layouts.footer/>   
-    <script src="js/jquery.min.js"></script>
-    <script src="js/popper.js"></script>
-    <script src="js/main.js"></script>
-    
+
+    <x-layouts.footer/>
+    <script src="{{ asset('js/jquery.min.js')}}"></script>
+    <script src="{{ asset('js/popper.js')}}"></script>
+    <script src="{{ asset('js/main.js')}}"></script>
+
   </body>
-  
+
 <!--<body>
     <x-layouts.nav/>
 

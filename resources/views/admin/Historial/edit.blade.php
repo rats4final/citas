@@ -9,7 +9,7 @@
           @method("PATCH")
           <input type="hidden" name="Id_Sede" id="Id_Sede" value="{{$Historia->id_historial}}" />
 
-          <label>Paciente</label><br><select name="id_persona" id="id_persona" class="form-select" required>
+          <label>Paciente</label><br><select name="id_persona" id="id_persona" class="form-control" required>
 
             <option value="">Por favor selecione un Paciente</option>
             @foreach ( $Users as $user)
@@ -22,9 +22,9 @@
             @endif
             @endforeach
 
-        </select>
+        </select><br>
 
-          <label>Sede</label><br><select name="id_sede" id="id_sede" class="form-select" required>
+          <label>Sede</label><br><select name="id_sede" id="id_sede" class="form-control" required>
 
             <option value="">Por favor selecione una Sede</option>
             @foreach ( $Sedes as $sede)
@@ -34,10 +34,10 @@
             <option value="{{$sede->id_sede}}" > {{$sede->nombre_sede}}</option>
             @endif
             @endforeach
-        </select>
+        </select><br>
 
 
-          <label>Medicos</label><br><select name="id_medico" id="id_medico" class="form-select" required>
+          <label>Medicos</label><br><select name="id_medico" id="id_medico" class="form-control" required>
 
             <option value="">Por favor selecione un Medico</option>
             @foreach ( $Users as $user)
@@ -49,7 +49,7 @@
             @endif
             @endif
             @endforeach
-        </select>
+        </select><br>
 
           <label>Fecha de la historia</label></br>
           <input required type="datetime-local" name="fecha_historial" id="fecha_historial" value="{{$Historia->fecha_historial}}" min="2022-11-26 00:00" max="2022-12-30 10:00"  class="form-control"></br>

@@ -10,6 +10,9 @@ use App\Http\Controllers\PatologiaController;
 use App\Http\Controllers\PersonaController;
 
 use App\Http\Controllers\HistorialController;
+use App\Http\Controllers\EspecialidadController;
+
+
 use App\Http\Controllers\UsuarioController;
 /*
 |--------------------------------------------------------------------------
@@ -42,6 +45,7 @@ Route::get('vanilla-dt',function (){
 
 //Rutas de controladores
 Route::resource('sedes', App\Http\Controllers\SedeController::class);
+Route::resource('especialidad', App\Http\Controllers\EspecialidadController::class);
 Route::resource('TipoSangre', TipoSangreController::class);
 Route::resource('TipoPatologia', TipoPatologiaController::class);
 Route::resource('Patologia', PatologiaController::class);

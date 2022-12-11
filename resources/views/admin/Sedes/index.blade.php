@@ -1,6 +1,6 @@
 <x-layouts.app>
 <div class="d-flex">
-        <div class="col-md-9">
+        <div class="col-md-12">
             <div class="card">
                 <div class="card-header">
                     <h2>Sedes</h2>
