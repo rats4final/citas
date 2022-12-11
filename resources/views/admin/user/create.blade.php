@@ -42,13 +42,6 @@
                 </select> <br>
 
 
-                <label>Pariente Donante</label></br>
-                <select class="form-control" required name="id_pariente">
-                    @foreach($personas as $persona)
-                        <option value="{{ $persona->id_persona }}">{{$persona->nombre_per}}</option>
-                    @endforeach
-                </select> <br>
-
 
                 <label>Es donante</label></br>
                 <input type="text" name="donante" class="form-control" required></br>

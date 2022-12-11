@@ -29,9 +29,8 @@ class PersonaController extends Controller
      */
     public function create()
     {
-        $personas = Persona::get();
         $tipos_sangre = TipoSangre::get();
-        return view('admin.Persona.create', compact('tipos_sangre','personas'));
+        return view('admin.Persona.create', compact('tipos_sangre'));
     }
 
     /**
@@ -66,9 +65,8 @@ class PersonaController extends Controller
      */
     public function edit(Persona $persona)
     {
-        $personas = Persona::get();
         $tipos_sangre = TipoSangre::get();
-        return view('admin.Persona.edit', compact('tipos_sangre','personas','persona'));
+        return view('admin.Persona.edit', compact('tipos_sangre','persona'));
     }
 
     /**

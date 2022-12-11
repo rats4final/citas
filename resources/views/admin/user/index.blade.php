@@ -25,7 +25,6 @@
                                             <th># Seguro</th>
                                             <th>Es donante</th>
                                             <th>Tipo Sangre</th>
-                                            <th>Pariente</th>
                                             <th>Username</th>
                                             <th>Correo</th>
                                             <th>Acciones</th>
@@ -44,7 +43,6 @@
                                             <td>{{ $usuario->persona->num_seguro }}</td>
                                             <td>{{ $usuario->persona->donante }}</td>
                                             <td>{{ $usuario->persona->tipo_sangre->nombre_tipo_sangre }}</td>
-                                            <td>{{ $usuario->persona->pariente->nombre_per }}</td>
 
                                             <td>{{ $usuario->username }}</td>
 

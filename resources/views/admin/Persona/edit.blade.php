@@ -30,16 +30,6 @@
                             >{{$tipo_sangre->nombre_tipo_sangre}}</option>
                     @endforeach
                 </select> <br>
-                <label>Pariente Donante</label></br>
-                <select class="form-control" name="id_pariente">
-                    @foreach($personas as $persona)
-                        <option value="{{ $persona->id_pariente }}"
-                            @if ($persona->id_pariente == $persona->id_persona)
-                                selected
-                            @endif
-                            >{{$persona->nombre_per}}</option>
-                    @endforeach
-                </select> <br>
                 <label>Es donante</label></br>
                 <select name="donante" class="form-control">
                     @if ($persona->donante==1)

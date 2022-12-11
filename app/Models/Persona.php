@@ -30,10 +30,6 @@ class Persona extends Model
         return $this->belongsTo(TipoSangre::class,'id_tipo_sangre','id_tipo_sangre');
     }
 
-    public function pariente(){
-        return $this->belongsTo(Persona::class,'id_pariente','id_persona');
-    }
-
     public function has_especialidad()
     {
         return $this->hasMany(Usario_has_especialidad::class,'id_medico','id_persona');

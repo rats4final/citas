@@ -25,12 +25,6 @@
                         <option value="{{ $tipo_sangre->id_tipo_sangre }}">{{$tipo_sangre->nombre_tipo_sangre}}</option>
                     @endforeach
                 </select> <br>
-                <label>Pariente Donante</label></br>
-                <select class="form-control" name="id_pariente">
-                    @foreach($personas as $persona)
-                        <option value="{{ $persona->id_persona }}">{{$persona->nombre_per}}</option>
-                    @endforeach
-                </select> <br>
                 <label>Es donante</label></br>
                 <select name="donante" class="form-control">
                     <option value="1">Si</option>

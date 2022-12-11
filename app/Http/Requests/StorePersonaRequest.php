@@ -23,7 +23,6 @@ class StorePersonaRequest extends FormRequest
             'num_seguro'=> 'nullable',
             'donante'=> 'required',
             'id_tipo_sangre'=> 'required',
-            'id_pariente'=>'required'
         ];
     }
 }
