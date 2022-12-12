@@ -39,7 +39,7 @@
           </div>
 
               <label>Fecha</label></br>
-              <input type="datetime-local" name="fecha_cita" id="fecha_cita" class="form-control"></br>
+              <input type="datetime-local" name="fecha_cita" id="myDate" class="form-control"></br>
               @error('fecha_cita')
               <small style="color: red">{{$message}}</small>
               @enderror

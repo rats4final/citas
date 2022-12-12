@@ -16,6 +16,7 @@
         "vite": "^3.0.0"
     },
     "dependencies": {
+        "flatpickr": "^4.6.13",
         "simple-datatables": "^3.2.2"
     }
 }

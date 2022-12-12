@@ -1,3 +1,5 @@
+@import "flatpickr/dist/flatpickr.min.css"; /*estilos del flatpickr*/
+@import "flatpickr/dist/themes/material_green.css";
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
