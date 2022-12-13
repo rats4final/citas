@@ -11,7 +11,7 @@ use App\Http\Controllers\PersonaController;
 
 use App\Http\Controllers\HistorialController;
 use App\Http\Controllers\EspecialidadController;
-
+use App\Http\Controllers\MedicoController;
 
 use App\Http\Controllers\UsuarioController;
 /*
@@ -54,4 +54,6 @@ Route::resource('Historial', HistorialController::class);
 Route::resource('TipoRelacion', \App\Http\Controllers\TipoRelacionController::class);
 Route::resource('Citas', CitasController::class);
 Route::resource('Usuario', UsuarioController::class);
+
+Route::resource('Medico', MedicoController::class);
 

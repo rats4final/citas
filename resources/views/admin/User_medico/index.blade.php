@@ -4,11 +4,11 @@
             <div class="col">
                 <div class="card">
                     <div class="card-header">
-                        <h2>Pacientes</h2>
+                        <h2>Medicos</h2>
                     </div>
                     <div class="card-body">
-                        <a href="{{ url('/Usuario/create') }}" class="btn btn-success btn-sm" title="Añadir nueva usuario">
-                            <i class="fa fa-plus" aria-hidden="true"></i> Nuevo Paciente
+                        <a href="{{ url('/Medico/create') }}" class="btn btn-success btn-sm" title="Añadir nueva usuario">
+                            <i class="fa fa-plus" aria-hidden="true"></i> Nuevo Medico
                         </a>
                         <br>
                         <br>
@@ -22,6 +22,7 @@
                                         <th>CI</th>
                                         <th>Celular</th>
                                         <th>Fecha Nac</th>
+                                        <th>Especialidades</th>
                                         <th># Seguro</th>
                                         <th>Es donante</th>
                                         <th>Tipo Sangre</th>
@@ -32,7 +33,7 @@
                                 </thead>
                                 <tbody>
                                     @foreach ($usuarios as $usuario)
-                                    @if ($usuario->estado==1 &&  $usuario->rol==2)
+                                    @if ($usuario->estado==1 &&  $usuario->rol==1)
                                     <tr>
                                         <td>{{ $usuario->persona->nombre_per }}</td>
                                         <td>{{ $usuario->persona->apellido_pa_per }}</td>
@@ -40,6 +41,11 @@
                                         <td>{{ $usuario->persona->ci_per }}</td>
                                         <td>{{ $usuario->persona->cel_per }}</td>
                                         <td>{{ $usuario->persona->fecha_nac }}</td>
+                                        <td>  @foreach ($usuario->persona->has_especialidad as $has_especialidad )
+                                            {{$has_especialidad->especialidad->nombre_especialidad }},
+                                        @endforeach
+                                    </td>
+
                                         <td>{{ $usuario->persona->num_seguro }}</td>
                                         <td>
                                             @if ($usuario->persona->donante == 1)
@@ -66,11 +72,11 @@
                                         <td>{{ $usuario->username }}</td>
                                         <td>{{ $usuario->email }}</td>
                                         <td>
-                                            <a href=""
+                                            <a href="{{ url('/Medico' . '/' . $usuario->id . '/edit') }}"
                                                 title="Edit Student"><button class="btn btn-primary btn-sm"><i
                                                         class="fa fa-pencil-square-o" aria-hidden="true"></i>
                                                     Editar</button></a>
-                                            <form method="POST" action="{{ url('/Usuario' . '/' . $usuario->id) }}"
+                                            <form method="POST" action="{{ url('/Medico' . '/' . $usuario->id) }}"
                                                 accept-charset="UTF-8" style="display:inline">
                                                 @method('DELETE')
                                                 @csrf

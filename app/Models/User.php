@@ -50,4 +50,6 @@ class User extends Authenticatable
     {
         return $this->belongsTo(Persona::class,'id_persona','id_persona');
     }
+
+
 }
