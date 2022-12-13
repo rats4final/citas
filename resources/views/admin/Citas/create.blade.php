@@ -73,7 +73,7 @@
             });
         });
             $("#select1").change(function () {
-
+                //un momento, esto es jquery!?
                         if ($(this).data('options') == undefined) {
                             $(this).data('options', $('#select2 option').clone());
                         }

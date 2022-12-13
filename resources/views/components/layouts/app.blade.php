@@ -51,7 +51,10 @@
         <a href="#"><span class="fa fa-support mr-3"></span> Support</a>
       </li>
       <li>
-        <a href="#"><span class="fa fa-sign-out mr-3"></span> Salir</a>
+        <form action="{{ route('logout') }}" method="POST">
+          @csrf
+          <input type="submit" value="Salir">
+        </form>
       </li>
     </ul>
 
