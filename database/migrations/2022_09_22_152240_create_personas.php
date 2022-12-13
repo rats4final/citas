@@ -15,15 +15,15 @@ return new class extends Migration
     {
         Schema::create('personas', function (Blueprint $table) {
             $table->Increments('id_persona');
-            $table->string('nombre_per');
-            $table->string('apellido_pa_per');
-            $table->string('apellido_ma_per');
-            $table->integer('ci_per');
-            $table->integer('cel_per');
-            $table->string('num_seguro');
-            $table->boolean('donante');
-            $table->date('fecha_nac');
-            $table->Integer('id_tipo_sangre')->unsigned();
+            $table->string('nombre_per')->nullable();
+            $table->string('apellido_pa_per')->nullable();
+            $table->string('apellido_ma_per')->nullable();
+            $table->integer('ci_per')->nullable();
+            $table->integer('cel_per')->nullable();
+            $table->string('num_seguro')->nullable();
+            $table->boolean('donante')->nullable();
+            $table->date('fecha_nac')->nullable();
+            $table->Integer('id_tipo_sangre')->unsigned()->nullable()->default(1);
             $table->foreign('id_tipo_sangre')->references('id_tipo_sangre')->on('tipos_sangre');
             $table->timestamps();
         });
